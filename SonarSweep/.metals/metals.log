@@ -418,3 +418,172 @@ No more data in the client stdin, exiting...
 No more data in the server stdin, exiting...
 No more data in the server stdin, exiting...
 No more data in the server stdin, exiting...
+[0m2021.12.09 00:54:53 INFO  Started: Metals version 0.10.9 in workspace '/Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.09 00:54:56 INFO  time: initialize in 2.69s[0m
+[0m2021.12.09 00:54:57 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Dec 09, 2021 12:54:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import scala.io.Source\nimport scala.collection.immutable.ListMap\n\nclass Diagnostics {\n  def diagnose(report_values: Array[String]): Map[String, Int] \u003d {\n    var processed_values: Map[String, Map[Int, Int]] \u003d Map()\n    for (report_value \u003c- report_values) {\n      val values \u003d report_value.split(\"\")\n      processed_values \u003d this.updateProcessedValues(processed_values, values)\n    }\n    // Sort based on keys to have these appear correctly while building the binary value\n    val sorted_values \u003d ListMap(processed_values.toSeq.sortBy(_._1.toInt):_*)\n\n    Map(\n      \"Power consumption: \" -\u003e this.calculatePowerConsumption(sorted_values),\n      \"Life support rating\" -\u003e this.calculateLifeSupportRating(report_values)\n    )\n  }\n\n  def updateProcessedValues(processed_values: Map[String, Map[Int, Int]], values: Array[String]): Map[String, Map[Int, Int]] \u003d {\n    var updated_processed_values \u003d processed_values\n    var i \u003d 0\n    for (value \u003c- values) {\n      val int_value \u003d value.toInt\n      val key: String \u003d i.toString\n      // initialize keys\n      if (!updated_processed_values.contains(key)) {\n        updated_processed_values \u003d updated_processed_values + (key -\u003e Map(1 -\u003e 0, 0 -\u003e 0))\n      }\n\n      if (updated_processed_values.contains(key)) {\n        var processed_value \u003d updated_processed_values(key)\n        val current_value \u003d processed_value(int_value) + 1\n        processed_value \u003d processed_value + (int_value -\u003e current_value)\n        updated_processed_values \u003d updated_processed_values + (key -\u003e processed_value)\n      }\n\n      i +\u003d 1\n    }\n\n    updated_processed_values\n  }\n\n  def calculateLifeSupportRating(report_values: Array[String]): Int \u003d {\n    var CO2_rating_values \u003d report_values\n    var oxygen_rating_values \u003d report_values\n\n//    while (CO2_rating_values.length \u003e 1) {\n      var processed_values: Map[String, Map[Int, Int]] \u003d Map()\n      for (report_value \u003c- report_values) {\n        val values \u003d report_value.split(\"\")\n        processed_values \u003d this.updateProcessedValues(processed_values, values)\n      }\n      // Sort based on keys to have these appear correctly while building the binary value\n      val sorted_values \u003d ListMap(processed_values.toSeq.sortBy(_._1.toInt):_*)\n      println(\"Current CO2 values: \" + CO2_rating_values.mkString(\"Array(\", \", \", \")\"))\n      CO2_rating_values \u003d this.filterMaxValues(CO2_rating_values, sorted_values)\n//    }\n\n    getDecimalValue(CO2_rating_values(0)) * getDecimalValue(oxygen_rating_values(0))\n  }\n\n  def refreshArray(report_values: Array[String]): Map[String, Map[Int, Int]] \u003d {\n    var processed_values: Map[String, Map[Int, Int]] \u003d Map()\n      for (report_value \u003c- report_values) {\n        val values \u003d report_value.split(\"\")\n        processed_values \u003d this.updateProcessedValues(processed_values, values)\n      }\n      // Sort based on keys to have these appear correctly while building the binary value\n      ListMap(processed_values.toSeq.sortBy(_._1.toInt):_*)\n  }\n\n  def filterMaxValues(report_values: Array[String], values: Map[String, Map[Int, Int]]): Array[String] \u003d {\n    println(\"Filtering Max life support values\")\n    var rating_values \u003d report_values\n    var updatable_values \u003d values\n    val keys \u003d updatable_values.keys\n\n    println(\"KEYS Being processed: \" + keys.mkString(\"Array(\", \", \", \")\"))\n      for (key \u003c- keys) {\n        var accepted_rating_values \u003d Array[String]()\n        val common_value \u003d this.getMostCommonBinaryValue(updatable_values(key))\n        if (rating_values.length \u003e 1) {\n          for (rating \u003c- rating_values) {\n            val binary_values \u003d rating.split(\"\")\n            println(\"Key being processed: \" + binary_values(key.toInt))\n            if (binary_values(key.toInt).toInt \u003d\u003d common_value) {\n              println(\"Common value being processed YAYYY: \" + rating)\n              accepted_rating_values \u003d accepted_rating_values :+ rating\n            } else {\n              println(\"Value being processed NEEE: \" + binary_values(key.toInt))\n            }\n          }\n\n        // overwrite the filtered values\n        rating_values \u003d accepted_rating_values\n        updatable_values \u003d this.refreshArray(rating_values)\n        }\n\n      }\n    \n    println(\"VALUESSSSS: \" + rating_values.toArray.mkString(\"Array(\", \", \", \")\"))\n\n    rating_values\n  }\n\n  def filterMinValues(report_values: Array[String], values: Map[String, Map[Int, Int]]): Array[String] \u003d {\n    println(\"Filtering Min life support values\")\n    var rating_values \u003d report_values\n    val keys \u003d values.keys\n//    while (rating_values.length \u003e 1) {\n      for (key \u003c- keys) {\n        val min_value \u003d values(key).minBy(_._2)._1\n        var accepted_rating_values \u003d Array[String]()\n        if (rating_values.length \u003e 1) {\n          for (rating \u003c- rating_values) {\n            val binary_values \u003d rating.split(\"\")\n            println(\"Value being processed: \" + binary_values(key.toInt))\n            if (binary_values(key.toInt).toInt \u003d\u003d min_value) {\n              accepted_rating_values \u003d accepted_rating_values :+ rating\n              println(\"Value processed YAYYY: \" + accepted_rating_values.mkString(\"Array(\", \", \", \")\"))\n            } else {\n              println(\"Value being processed NEEEe: \" + binary_values(key.toInt))\n            }\n          }\n        }\n\n        // overwrite the filtered values\n        rating_values \u003d accepted_rating_values\n      }\n//    }\n    println(\"VALUESSSSS: \" + rating_values.mkString(\"Array(\", \", \", \")\"))\n\n    rating_values\n  }\n\n  def calculatePowerConsumption(values: Map[String, Map[Int, Int]]): Int \u003d {\n    println(\"Calculating power consumption for values: \" + values.toArray.mkString(\"Array(\", \", \", \")\"))\n    val keys \u003d values.keys\n    var gamma_binary_value \u003d \"\"\n    var epsilon_binary_value \u003d \"\"\n    for (key \u003c- keys) {\n      gamma_binary_value \u003d gamma_binary_value + values(key).maxBy(_._2)._1\n      epsilon_binary_value \u003d epsilon_binary_value + values(key).minBy(_._2)._1\n    }\n    println(\"Gamma binary retrieved \u003d \" + gamma_binary_value)\n    println(\"Epsilon binary retrieved \u003d \" + epsilon_binary_value)\n\n    getDecimalValue(gamma_binary_value) * getDecimalValue(epsilon_binary_value)\n  }\n\n  def getDecimalValue(binary_value: String): Int \u003d {\n    Integer.parseInt(binary_value, 2)\n  }\n\n  def getMostCommonBinaryValue(value_map: Map[Int, Int]): Int \u003d {\n    val value_0_count \u003d value_map(0)\n    val value_1_count \u003d value_map(1)\n    if (value_0_count \u003e value_1_count) {\n      0\n    } else if(value_1_count \u003e value_0_count){\n      1\n    } else {\n      1\n    }\n  }\n}\n\nobject Diagnose {\n  def main(arge: Array[String]): Unit \u003d{\n    val diagnostics: Diagnostics \u003d new Diagnostics()\n    val diagnostics_report \u003d Source.fromFile(\"/Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/DataFiles/diagnostics_report_test\").getLines.toArray\n    println(\"The Diagnostics report for the submarine: \" + diagnostics.diagnose(diagnostics_report).toArray.mkString(\"Array(\", \", \", \")\"))\n  }\n}"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:375)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:426)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3272)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLanguageServer.didOpen(MetalsLanguageServer.scala:996)
+	... 16 more
+
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3963325333078509278/bsp.socket'...
+Waiting for the bsp connection to come up...
+Dec 09, 2021 12:54:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.util.NoSuchElementException: BatchedFunction
+java.util.concurrent.CompletionException: java.util.NoSuchElementException: BatchedFunction
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2158)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: java.util.NoSuchElementException: BatchedFunction
+	at scala.meta.internal.metals.BatchedFunction.<init>(BatchedFunction.scala:59)
+	at scala.meta.internal.metals.MetalsLanguageServer.<init>(MetalsLanguageServer.scala:195)
+	at scala.meta.metals.Main$.main(Main.scala:51)
+	at scala.meta.metals.Main.main(Main.scala)
+
+[0m2021.12.09 00:54:57 ERROR text document: file:///Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala
+java.nio.file.NoSuchFileException: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.nio.file.Files.newByteChannel(Files.java:375)
+	at java.nio.file.Files.newByteChannel(Files.java:426)
+	at java.nio.file.Files.readAllBytes(Files.java:3272)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$2(InteractiveSemanticdbs.scala:88)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:88)
+	at java.util.HashMap.compute(HashMap.java:1320)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2732)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:87)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:61)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1568)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1566)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3963325333078509278/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3963325333078509278/bsp.socket...
+[0m2021.12.09 00:54:56 INFO  skipping build import with status 'Failed'[0m
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.09 00:54:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.09 00:54:57 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3795947334660466327/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3795947334660466327/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3795947334660466327/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.09 00:54:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.09 00:54:57 INFO  time: Connected to build server in 0.51s[0m
+[0m2021.12.09 00:54:57 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.09 00:54:57 INFO  time: Imported build in 0.11s[0m
+[0m2021.12.09 00:54:58 INFO  Required scalafmt dialect rewrite to 'scala3'. Directories:
+- target/scala-3.1.0/src_managed/test[0m
+[0m2021.12.09 00:55:06 INFO  time: indexed workspace in 8.72s[0m
+[0m2021.12.09 00:55:09 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.09 00:55:13 ERROR text document: file:///Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala
+java.nio.file.NoSuchFileException: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.nio.file.Files.newByteChannel(Files.java:375)
+	at java.nio.file.Files.newByteChannel(Files.java:426)
+	at java.nio.file.Files.readAllBytes(Files.java:3272)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$2(InteractiveSemanticdbs.scala:88)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:88)
+	at java.util.HashMap.compute(HashMap.java:1320)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2732)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:87)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:61)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1568)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1566)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+[0m
+[0m2021.12.09 00:55:13 INFO  time: code lens generation in 6.36s[0m
