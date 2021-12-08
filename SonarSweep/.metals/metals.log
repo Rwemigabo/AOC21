@@ -1,0 +1,420 @@
+[0m2021.12.08 18:28:46 INFO  Started: Metals version 0.10.9 in workspace '/Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.08 18:28:47 INFO  time: initialize in 1.81s[0m
+[0m2021.12.08 18:28:48 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher7734500893682869827/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher7734500893682869827/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher7734500893682869827/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 18:28:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 18:28:48 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher1243207289588059850/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher1243207289588059850/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher1243207289588059850/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 18:28:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 18:28:49 INFO  time: Connected to build server in 0.66s[0m
+[0m2021.12.08 18:28:49 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.08 18:28:56 INFO  time: indexed workspace in 6.7s[0m
+[0m2021.12.08 18:28:56 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnostics.sc[0m
+[0m2021.12.08 18:28:56 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnostics.sc[0m
+[0m2021.12.08 18:28:57 INFO  running '/Users/ericrwemigabo/Library/Java/JavaVirtualMachines/openjdk-16.0.1/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/metals5544711145314711463/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.12.08 18:28:58 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.08 18:29:01 INFO  [info] welcome to sbt 1.5.5 (Oracle Corporation Java 16.0.1)[0m
+[0m2021.12.08 18:29:03 INFO  [info] loading global plugins from /Users/ericrwemigabo/.sbt/1.0/plugins[0m
+[0m2021.12.08 18:29:05 INFO  [info] loading settings for project sonarsweep-build-build from metals.sbt ...[0m
+[0m2021.12.08 18:29:05 INFO  [info] loading project definition from /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/project/project[0m
+[0m2021.12.08 18:29:05 INFO  [info] loading settings for project sonarsweep-build from metals.sbt ...[0m
+[0m2021.12.08 18:29:06 INFO  [info] loading project definition from /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/project[0m
+[0m2021.12.08 18:29:10 INFO  [success] Generated .bloop/sonarsweep-build.json[0m
+[0m2021.12.08 18:29:10 INFO  [success] Total time: 4 s, completed 8 Dec 2021, 18:29:10[0m
+[0m2021.12.08 18:29:10 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.12.08 18:29:10 INFO  [info] set current project to SonarSweep (in build file:/Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/)[0m
+[0m2021.12.08 18:29:10 INFO  [success] Generated .bloop/root.json[0m
+[0m2021.12.08 18:29:10 INFO  [success] Generated .bloop/root-test.json[0m
+[0m2021.12.08 18:29:10 INFO  [success] Total time: 0 s, completed 8 Dec 2021, 18:29:11[0m
+[0m2021.12.08 18:29:11 INFO  time: ran 'sbt bloopInstall' in 13s[0m
+[0m2021.12.08 18:29:11 INFO  Disconnecting from Bloop session...[0m
+[0m2021.12.08 18:29:11 INFO  Shut down connection with build server.[0m
+[0m2021.12.08 18:29:11 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.12.08 18:29:11 INFO  Attempting to connect to the build server...No more data in the server stdin, exiting...
+[0m
+No more data in the server stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher396527083075683277/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher396527083075683277/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher396527083075683277/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 18:29:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 18:29:11 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher13254406534240821355/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher13254406534240821355/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher13254406534240821355/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 18:29:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 18:29:11 INFO  time: Connected to build server in 71ms[0m
+[0m2021.12.08 18:29:11 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.08 18:29:12 INFO  time: indexed workspace in 1.63s[0m
+[0m2021.12.08 18:29:12 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnostics.sc[0m
+[0m2021.12.08 18:29:15 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.08 18:29:17 ERROR Error getting Ammonite 2.3.8-124-2da846d2 (scala 2.13.7)
+ammrunner.CoursierError: Error fetching Ammonite 2.3.8-124-2da846d2 for scala 2.13.7
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:90)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:108)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:161)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:239)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:239)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:190)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3(Ammonite.scala:215)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3$adapted(Ammonite.scala:208)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+Caused by: coursierapi.error.MultipleResolutionError: Error downloading com.lihaoyi:ammonite-compiler_2.13.7:2.3.8-124-2da846d2
+  not found: /Users/ericrwemigabo/.ivy2/local/com.lihaoyi/ammonite-compiler_2.13.7/2.3.8-124-2da846d2/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite-compiler_2.13.7/2.3.8-124-2da846d2/ammonite-compiler_2.13.7-2.3.8-124-2da846d2.pom
+Error downloading com.lihaoyi:ammonite-repl-api_2.13.7:2.3.8-124-2da846d2
+  not found: /Users/ericrwemigabo/.ivy2/local/com.lihaoyi/ammonite-repl-api_2.13.7/2.3.8-124-2da846d2/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite-repl-api_2.13.7/2.3.8-124-2da846d2/ammonite-repl-api_2.13.7-2.3.8-124-2da846d2.pom
+
+	at coursierapi.error.MultipleResolutionError.of(MultipleResolutionError.java:28)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:356)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:87)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:108)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:161)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:239)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:239)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:190)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3(Ammonite.scala:215)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3$adapted(Ammonite.scala:208)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+[0m
+[0m2021.12.08 18:31:05 INFO  shutting down Metals[0m
+[0m2021.12.08 18:31:05 INFO  Shut down connection with build server.[0m
+[0m2021.12.08 18:31:05 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.12.08 22:19:59 INFO  Started: Metals version 0.10.9 in workspace '/Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.08 22:20:00 INFO  time: initialize in 1.9s[0m
+[0m2021.12.08 22:20:01 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher10942124348760999380/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher10942124348760999380/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher10942124348760999380/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 22:20:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 22:20:01 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher16614347631770892927/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher16614347631770892927/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher16614347631770892927/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 22:20:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 22:20:02 INFO  time: Connected to build server in 0.61s[0m
+[0m2021.12.08 22:20:02 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.08 22:20:02 INFO  time: Imported build in 0.44s[0m
+[0m2021.12.08 22:20:03 ERROR Error getting Ammonite 2.3.8-124-2da846d2 (scala 2.13.7)
+ammrunner.CoursierError: Error fetching Ammonite 2.3.8-124-2da846d2 for scala 2.13.7
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:90)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:108)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:161)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:239)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:239)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:190)
+	at scala.meta.internal.metals.ammonite.Ammonite.maybeImport(Ammonite.scala:202)
+	at scala.meta.internal.metals.MetalsLanguageServer.didOpen(MetalsLanguageServer.scala:1027)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+Caused by: coursierapi.error.MultipleResolutionError: Error downloading com.lihaoyi:ammonite-compiler_2.13.7:2.3.8-124-2da846d2
+  not found: /Users/ericrwemigabo/.ivy2/local/com.lihaoyi/ammonite-compiler_2.13.7/2.3.8-124-2da846d2/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite-compiler_2.13.7/2.3.8-124-2da846d2/ammonite-compiler_2.13.7-2.3.8-124-2da846d2.pom
+Error downloading com.lihaoyi:ammonite-repl-api_2.13.7:2.3.8-124-2da846d2
+  not found: /Users/ericrwemigabo/.ivy2/local/com.lihaoyi/ammonite-repl-api_2.13.7/2.3.8-124-2da846d2/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite-repl-api_2.13.7/2.3.8-124-2da846d2/ammonite-repl-api_2.13.7-2.3.8-124-2da846d2.pom
+
+	at coursierapi.error.MultipleResolutionError.of(MultipleResolutionError.java:28)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:356)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:87)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:108)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:161)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:239)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:239)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:190)
+	at scala.meta.internal.metals.ammonite.Ammonite.maybeImport(Ammonite.scala:202)
+	at scala.meta.internal.metals.MetalsLanguageServer.didOpen(MetalsLanguageServer.scala:1027)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+[0m
+[0m2021.12.08 22:20:07 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.08 22:20:09 INFO  running '/Users/ericrwemigabo/Library/Java/JavaVirtualMachines/openjdk-16.0.1/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/metals16668191792206017056/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.12.08 22:20:11 INFO  [info] welcome to sbt 1.5.5 (Oracle Corporation Java 16.0.1)[0m
+[0m2021.12.08 22:20:12 INFO  time: indexed workspace in 9.96s[0m
+[0m2021.12.08 22:20:12 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnostics.sc[0m
+[0m2021.12.08 22:20:12 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnostics.sc[0m
+[0m2021.12.08 22:20:13 INFO  [info] loading global plugins from /Users/ericrwemigabo/.sbt/1.0/plugins[0m
+[0m2021.12.08 22:20:14 INFO  [info] loading settings for project sonarsweep-build-build from metals.sbt ...[0m
+[0m2021.12.08 22:20:14 INFO  [info] loading project definition from /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/project/project[0m
+[0m2021.12.08 22:20:14 INFO  [info] loading settings for project sonarsweep-build from metals.sbt ...[0m
+[0m2021.12.08 22:20:15 INFO  [info] loading project definition from /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/project[0m
+[0m2021.12.08 22:20:17 INFO  time: code lens generation in 14s[0m
+[0m2021.12.08 22:20:17 INFO  time: code lens generation in 4.92s[0m
+[0m2021.12.08 22:20:23 INFO  [success] Generated .bloop/sonarsweep-build.json[0m
+[0m2021.12.08 22:20:23 INFO  [success] Total time: 7 s, completed 8 Dec 2021, 22:20:23[0m
+[0m2021.12.08 22:20:27 ERROR /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/build.sbt:18: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash[0m
+[0m2021.12.08 22:20:27 ERROR sourceGenerators in Test += Def.task {[0m
+[0m2021.12.08 22:20:27 ERROR                  ^[0m
+[0m2021.12.08 22:20:27 ERROR /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/build.sbt:19: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash[0m
+[0m2021.12.08 22:20:27 ERROR   val file = (sourceManaged in Test).value / "amm.scala"[0m
+[0m2021.12.08 22:20:27 ERROR                             ^[0m
+[0m2021.12.08 22:20:27 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.12.08 22:20:27 INFO  [info] set current project to SonarSweep (in build file:/Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/)[0m
+[0m2021.12.08 22:20:28 INFO  compiling root-test (1 scala source)[0m
+[0m2021.12.08 22:20:28 INFO  [warn] [0m
+[0m2021.12.08 22:20:28 INFO  [warn] 	Note: Unresolved dependencies path:[0m
+[0m2021.12.08 22:20:28 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading com.lihaoyi:ammonite_3.1.0:1.6.5[0m
+[0m2021.12.08 22:20:28 INFO  [error]   Not found[0m
+[0m2021.12.08 22:20:28 INFO  [error]   Not found[0m
+[0m2021.12.08 22:20:28 INFO  [error]   not found: /Users/ericrwemigabo/.ivy2/localcom.lihaoyi/ammonite_3.1.0/1.6.5/ivys/ivy.xml[0m
+[0m2021.12.08 22:20:28 INFO  [error]   not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite_3.1.0/1.6.5/ammonite_3.1.0-1.6.5.pom[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:258)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:227)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:227)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:59)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:133)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:73)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:146)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:146)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:127)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:219)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:160)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3678)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.Execute.work(Execute.scala:291)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)[0m
+[0m2021.12.08 22:20:28 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:831)[0m
+[0m2021.12.08 22:20:28 INFO  [error] (update) sbt.librarymanagement.ResolveException: Error downloading com.lihaoyi:ammonite_3.1.0:1.6.5[0m
+[0m2021.12.08 22:20:28 INFO  [error]   Not found[0m
+[0m2021.12.08 22:20:28 INFO  [error]   Not found[0m
+[0m2021.12.08 22:20:28 INFO  [error]   not found: /Users/ericrwemigabo/.ivy2/localcom.lihaoyi/ammonite_3.1.0/1.6.5/ivys/ivy.xml[0m
+[0m2021.12.08 22:20:28 INFO  [error]   not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite_3.1.0/1.6.5/ammonite_3.1.0-1.6.5.pom[0m
+[0m2021.12.08 22:20:28 INFO  [error] Total time: 1 s, completed 8 Dec 2021, 22:20:28[0m
+[0m2021.12.08 22:20:28 INFO  time: ran 'sbt bloopInstall' in 19s[0m
+[0m2021.12.08 22:20:28 ERROR sbt command failed: /Users/ericrwemigabo/Library/Java/JavaVirtualMachines/openjdk-16.0.1/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/metals16668191792206017056/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall[0m
+[0m2021.12.08 22:20:28 INFO  Disconnecting from Bloop session...[0m
+[0m2021.12.08 22:20:28 INFO  Shut down connection with build server.[0m
+[0m2021.12.08 22:20:28 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.12.08 22:20:28 INFO  Attempting to connect to the build server...[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher16416896057850709995/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher16416896057850709995/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher16416896057850709995/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 22:20:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 22:20:28 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3852650006189761026/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3852650006189761026/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/_r/45cg7_zn03s4b5cmg568dz2w0000gn/T/bsp-launcher3852650006189761026/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.08 22:20:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ericrwemigabo/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+[0m2021.12.08 22:20:29 INFO  time: Connected to build server in 0.1s[0m
+[0m2021.12.08 22:20:29 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.08 22:20:31 INFO  time: indexed workspace in 2.73s[0m
+[0m2021.12.08 22:20:31 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnostics.sc[0m
+[0m2021.12.08 22:20:35 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.08 22:20:35 ERROR Error getting Ammonite 2.3.8-124-2da846d2 (scala 2.13.7)
+ammrunner.CoursierError: Error fetching Ammonite 2.3.8-124-2da846d2 for scala 2.13.7
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:90)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:108)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:161)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:239)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:239)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:190)
+	at scala.meta.internal.metals.ammonite.Ammonite.maybeImport(Ammonite.scala:202)
+	at scala.meta.internal.metals.MetalsLanguageServer.didOpen(MetalsLanguageServer.scala:1027)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+Caused by: coursierapi.error.MultipleResolutionError: Error downloading com.lihaoyi:ammonite-compiler_2.13.7:2.3.8-124-2da846d2
+  not found: /Users/ericrwemigabo/.ivy2/local/com.lihaoyi/ammonite-compiler_2.13.7/2.3.8-124-2da846d2/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite-compiler_2.13.7/2.3.8-124-2da846d2/ammonite-compiler_2.13.7-2.3.8-124-2da846d2.pom
+Error downloading com.lihaoyi:ammonite-repl-api_2.13.7:2.3.8-124-2da846d2
+  not found: /Users/ericrwemigabo/.ivy2/local/com.lihaoyi/ammonite-repl-api_2.13.7/2.3.8-124-2da846d2/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite-repl-api_2.13.7/2.3.8-124-2da846d2/ammonite-repl-api_2.13.7-2.3.8-124-2da846d2.pom
+
+	at coursierapi.error.MultipleResolutionError.of(MultipleResolutionError.java:28)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:356)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:87)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:108)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:161)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:239)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:239)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:190)
+	at scala.meta.internal.metals.ammonite.Ammonite.maybeImport(Ammonite.scala:202)
+	at scala.meta.internal.metals.MetalsLanguageServer.didOpen(MetalsLanguageServer.scala:1027)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+[0m
+[0m2021.12.08 22:20:35 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.sc[0m
+[0m2021.12.08 22:20:43 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+Dec 08, 2021 10:20:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12
+[0m2021.12.08 22:20:55 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/TestDebugging.scala[0m
+Dec 08, 2021 10:21:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+Dec 08, 2021 10:22:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 159
+Dec 08, 2021 10:22:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 165
+[0m2021.12.08 22:23:00 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 22:24:05 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 22:27:14 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 22:48:56 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+Dec 08, 2021 10:53:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 426
+[0m2021.12.08 22:59:59 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:09 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:09 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:10 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:10 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:12 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:12 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:13 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:16 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:16 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:20:24 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:23:54 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:24:57 WARN  no build target for: /Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/src/main/Diagnosis/Diagnostics.scala[0m
+[0m2021.12.08 23:35:05 INFO  shutting down Metals[0m
+[0m2021.12.08 23:35:05 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.08 23:35:05 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...

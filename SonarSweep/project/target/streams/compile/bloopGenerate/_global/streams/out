@@ -1,0 +1,4 @@
+[debug] [sonarsweep-build] Classpath dependencies List()
+[debug] [sonarsweep-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'sonarsweep-build' to '/Users/ericrwemigabo/Projects/AOC/AOC21/SonarSweep/project/.bloop/sonarsweep-build.json'
+[success] Generated .bloop/sonarsweep-build.json
